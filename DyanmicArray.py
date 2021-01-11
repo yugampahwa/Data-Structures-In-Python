@@ -100,4 +100,13 @@ class DynamicArray:
             self.A[i] = self.A[i + 1]
         self.A[self.n - 1] = None
         self.n -= 1
-
+        
+    """
+    Clear Function
+    """
+    def clear(self):
+        if self.n == 0:
+            return
+        for i in range(self.n):
+            self.A[i] = None
+        self.n = 0
